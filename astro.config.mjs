@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import react from '@astrojs/react';
+import node from '@astrojs/node';
 
 import svelte from '@astrojs/svelte';
 
@@ -13,5 +14,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   output:'server',
+  adapter: node({ mode: 'standalone' }),
   integrations: [react(), svelte()]
 });
