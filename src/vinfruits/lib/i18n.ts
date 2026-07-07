@@ -1,0 +1,297 @@
+export type Language = "vi" | "en";
+
+export const languageStorageKey = "vinfruits_language";
+
+export const languageLabels = {
+  vi: "VI",
+  en: "EN",
+} satisfies Record<Language, string>;
+
+export const uiText = {
+  vi: {
+    account: "Tài khoản",
+    admin: "Quản trị",
+    allPrices: "Tất cả mức giá",
+    allProducts: "Tất cả sản phẩm",
+    apply: "Áp dụng",
+    cart: "Giỏ hàng",
+    category: "Danh mục",
+    checkout: "Thanh toán",
+    clearFilters: "Xóa bộ lọc",
+    close: "Đóng",
+    contact: "Liên hệ",
+    continueShopping: "Tiếp tục mua hàng",
+    copied: "Đã sao chép",
+    copy: "Sao chép",
+    dailyImport: "Nhập khẩu mỗi ngày",
+    delivery: "Giao hàng",
+    deliveryFast: "Giao hàng nhanh",
+    deliveryFastText: "Giao trong ngày cho đơn nội thành.",
+    discountCode: "Mã giảm giá",
+    emptyCart: "Giỏ hàng của bạn đang trống.",
+    featuredProducts: "Sản phẩm nổi bật",
+    filters: "Bộ lọc",
+    footerBody:
+      "Trái cây cao cấp, quà tặng, giao hàng và quy trình mua sắm trực tuyến.",
+    footerTitle: "Ý tưởng gian hàng VinFruits",
+    free: "Miễn phí",
+    giftService: "Dịch vụ quà tặng",
+    giftServiceText: "Thiệp, giỏ, hộp và lựa chọn theo dịp.",
+    heroBody:
+      "Gian hàng lấy cảm hứng từ VinFruits với trái cây nhập khẩu cao cấp, giỏ quà, mã ưu đãi giao hàng, bộ lọc sản phẩm, giỏ hàng và thanh toán.",
+    heroCtaAbout: "Khám phá cửa hàng",
+    heroCtaProducts: "Mua sản phẩm",
+    heroTitle: "Quà tặng trái cây tươi cho mọi dịp",
+    home: "Trang chủ",
+    importedCherries: "Cherry Nhập Khẩu",
+    importedCherriesEyebrow: "Sẵn sàng cho mọi dịp",
+    noMatchingProducts: "Không có sản phẩm phù hợp với bộ lọc đã chọn.",
+    orderSummary: "Tóm tắt đơn hàng",
+    origin: "Xuất xứ",
+    pageNext: "Tiếp",
+    pagePrevious: "Trước",
+    price: "Giá",
+    price500To1000: "500k đến 1.000k",
+    priceHighToLow: "Giá: cao đến thấp",
+    priceLowToHigh: "Giá: thấp đến cao",
+    priceOver1000: "Trên 1.000k",
+    priceUnder500: "Dưới 500k",
+    productCount: "Hiển thị {shown} trên {total} sản phẩm",
+    products: "Sản phẩm",
+    searchPlaceholder: "Bạn đang tìm gì?",
+    searchProductsPlaceholder: "Tìm trái cây hoặc xuất xứ",
+    seasonalEyebrow: "4 ngày · 14 giờ · 30 phút",
+    seasonalFruit: "Trái Cây Đang Mùa",
+    shopCare: "Chính sách chăm sóc 48 giờ",
+    shopCareText: "Cam kết đổi hoặc hoàn tiền đơn giản cho trái cây tươi.",
+    sortNameAsc: "Tên: A đến Z",
+    subtotal: "Tạm tính",
+    switchLanguage: "Switch to English",
+    total: "Tổng cộng",
+    tryAgain: "Thử lại",
+    voucher: "Mã giảm giá",
+    voucherCopied: "Đã sao chép mã {code}",
+    voucherCopyFailed: "Không thể sao chép mã {code}",
+    viewAll: "Xem tất cả",
+  },
+  en: {
+    account: "Account",
+    admin: "Admin",
+    allPrices: "All prices",
+    allProducts: "All products",
+    apply: "Apply",
+    cart: "Cart",
+    category: "Category",
+    checkout: "Checkout",
+    clearFilters: "Clear filters",
+    close: "Close",
+    contact: "Contact",
+    continueShopping: "Continue shopping",
+    copied: "Copied",
+    copy: "Copy",
+    dailyImport: "Daily imports",
+    delivery: "Delivery",
+    deliveryFast: "Fast delivery",
+    deliveryFastText: "Same-day delivery for city orders.",
+    discountCode: "Discount code",
+    emptyCart: "Your cart is empty.",
+    featuredProducts: "Featured products",
+    filters: "Filters",
+    footerBody:
+      "Premium fruit, gifting, delivery, and online shopping workflows.",
+    footerTitle: "VinFruits storefront concept",
+    free: "Free",
+    giftService: "Gift service",
+    giftServiceText: "Cards, baskets, boxes, and occasion-based selections.",
+    heroBody:
+      "A VinFruits-inspired storefront with premium imported fruit, gift baskets, delivery coupons, product filters, cart, and checkout.",
+    heroCtaAbout: "Explore the shop",
+    heroCtaProducts: "Shop products",
+    heroTitle: "Fresh fruit gifts for every occasion",
+    home: "Home",
+    importedCherries: "Imported Cherries",
+    importedCherriesEyebrow: "Ready for every occasion",
+    noMatchingProducts: "No products match the selected filters.",
+    orderSummary: "Order summary",
+    origin: "Origin",
+    pageNext: "Next",
+    pagePrevious: "Previous",
+    price: "Price",
+    price500To1000: "500k to 1,000k",
+    priceHighToLow: "Price: high to low",
+    priceLowToHigh: "Price: low to high",
+    priceOver1000: "Over 1,000k",
+    priceUnder500: "Under 500k",
+    productCount: "Showing {shown} of {total} products",
+    products: "Products",
+    searchPlaceholder: "What are you looking for?",
+    searchProductsPlaceholder: "Search fruit or origin",
+    seasonalEyebrow: "4 days · 14 hours · 30 minutes",
+    seasonalFruit: "Seasonal Fruit",
+    shopCare: "48-hour care policy",
+    shopCareText: "Simple exchange or refund support for fresh fruit.",
+    sortNameAsc: "Name: A to Z",
+    subtotal: "Subtotal",
+    switchLanguage: "Chuyển sang tiếng Việt",
+    total: "Total",
+    tryAgain: "Try again",
+    voucher: "Voucher",
+    voucherCopied: "Copied code {code}",
+    voucherCopyFailed: "Could not copy code {code}",
+    viewAll: "View all",
+  },
+} satisfies Record<Language, Record<string, string>>;
+
+const categoryText: Record<string, Record<Language, string>> = {
+  "Tất cả": { vi: "Tất cả", en: "All" },
+  "Trái Cây Đang Mùa": { vi: "Trái Cây Đang Mùa", en: "Seasonal Fruit" },
+  "Cherry Nhập Khẩu": { vi: "Cherry Nhập Khẩu", en: "Imported Cherries" },
+  "Nho Sữa Hàn Quốc": {
+    vi: "Nho Sữa Hàn Quốc",
+    en: "Korean Shine Muscat Grapes",
+  },
+  "Nho Nhập Khẩu": { vi: "Nho Nhập Khẩu", en: "Imported Grapes" },
+  "Dâu Tây": { vi: "Dâu Tây", en: "Strawberries" },
+  "Việt Quất Nhập Khẩu": {
+    vi: "Việt Quất Nhập Khẩu",
+    en: "Imported Blueberries",
+  },
+  "Kiwi Nhập Khẩu": { vi: "Kiwi Nhập Khẩu", en: "Imported Kiwi" },
+  "Mận Nhập Khẩu": { vi: "Mận Nhập Khẩu", en: "Imported Plums" },
+  "Đào, Xuân Đào Nhập Khẩu": {
+    vi: "Đào, Xuân Đào Nhập Khẩu",
+    en: "Imported Peaches & Nectarines",
+  },
+  "Táo Nhập Khẩu": { vi: "Táo Nhập Khẩu", en: "Imported Apples" },
+  "Cam, Quýt": { vi: "Cam, Quýt", en: "Oranges & Mandarins" },
+  "Trái cây Việt Nam": { vi: "Trái cây Việt Nam", en: "Vietnamese Fruit" },
+  "Trái Cây Cắt Sẵn": { vi: "Trái Cây Cắt Sẵn", en: "Fresh-Cut Fruit" },
+  "Đồ Uống": { vi: "Đồ Uống", en: "Drinks" },
+  "Gift card": { vi: "Gift card", en: "Gift Card" },
+  "Giỏ Trái cây": { vi: "Giỏ Trái cây", en: "Fruit Baskets" },
+  "Giỏ trái cây tặng bác sĩ": {
+    vi: "Giỏ trái cây tặng bác sĩ",
+    en: "Fruit Baskets for Doctors",
+  },
+  "Giỏ trái cây thăm bệnh": {
+    vi: "Giỏ trái cây thăm bệnh",
+    en: "Get Well Fruit Baskets",
+  },
+  "Giỏ trái cây cảm ơn": {
+    vi: "Giỏ trái cây cảm ơn",
+    en: "Thank You Fruit Baskets",
+  },
+  "Giỏ trái cây tặng đối tác,khách hàng": {
+    vi: "Giỏ trái cây tặng đối tác,khách hàng",
+    en: "Client & Partner Fruit Baskets",
+  },
+  "Giỏ trái cây khai trương": {
+    vi: "Giỏ trái cây khai trương",
+    en: "Grand Opening Fruit Baskets",
+  },
+  "Giỏ trái cây sinh nhật": {
+    vi: "Giỏ trái cây sinh nhật",
+    en: "Birthday Fruit Baskets",
+  },
+  "Giỏ trái cây Chúc mừng": {
+    vi: "Giỏ trái cây Chúc mừng",
+    en: "Congratulations Fruit Baskets",
+  },
+  "Giỏ trái cây và hoa": {
+    vi: "Giỏ trái cây và hoa",
+    en: "Fruit & Flower Baskets",
+  },
+  "Giỏ trái cây dâng lễ": {
+    vi: "Giỏ trái cây dâng lễ",
+    en: "Ceremonial Fruit Baskets",
+  },
+  "Giỏ trái cây đám giỗ": {
+    vi: "Giỏ trái cây đám giỗ",
+    en: "Memorial Fruit Baskets",
+  },
+  "Giỏ trái cây đám tang": {
+    vi: "Giỏ trái cây đám tang",
+    en: "Funeral Fruit Baskets",
+  },
+  "Ngân sách dưới 1 triệu": {
+    vi: "Ngân sách dưới 1 triệu",
+    en: "Budget Under 1 Million",
+  },
+  "Ngân sách 1tr-2tr": { vi: "Ngân sách 1tr-2tr", en: "Budget 1M-2M" },
+  "Ngân sách 2tr-3tr": { vi: "Ngân sách 2tr-3tr", en: "Budget 2M-3M" },
+  "Ngân sách trên 3tr": {
+    vi: "Ngân sách trên 3tr",
+    en: "Budget Over 3 Million",
+  },
+  "Giỏ trái cây dịp lễ": {
+    vi: "Giỏ trái cây dịp lễ",
+    en: "Holiday Fruit Baskets",
+  },
+  "Giỏ trái cây 8/3": {
+    vi: "Giỏ trái cây 8/3",
+    en: "March 8 Fruit Baskets",
+  },
+  "Giỏ trái cây 20/10": {
+    vi: "Giỏ trái cây 20/10",
+    en: "October 20 Fruit Baskets",
+  },
+  "Giỏ trái cây 20/11": {
+    vi: "Giỏ trái cây 20/11",
+    en: "November 20 Fruit Baskets",
+  },
+  "Giỏ trái cây Valentine": {
+    vi: "Giỏ trái cây Valentine",
+    en: "Valentine Fruit Baskets",
+  },
+  "Giỏ trái cây cúng Tổ": {
+    vi: "Giỏ trái cây cúng Tổ",
+    en: "Ancestor Offering Fruit Baskets",
+  },
+  "Giỏ quà tặng ngày của Mẹ": {
+    vi: "Giỏ quà tặng ngày của Mẹ",
+    en: "Mother's Day Gift Baskets",
+  },
+  "Giỏ quà tặng ngày của Ba": {
+    vi: "Giỏ quà tặng ngày của Ba",
+    en: "Father's Day Gift Baskets",
+  },
+  "Giỏ trái cây giáng sinh": {
+    vi: "Giỏ trái cây giáng sinh",
+    en: "Christmas Fruit Baskets",
+  },
+  "Giỏ trái cây Tết Nguyên Đán": {
+    vi: "Giỏ trái cây Tết Nguyên Đán",
+    en: "Lunar New Year Fruit Baskets",
+  },
+  "Trái cây nhập khẩu": {
+    vi: "Trái cây nhập khẩu",
+    en: "Imported Fruit",
+  },
+  "Giới thiệu": { vi: "Giới thiệu", en: "About" },
+  "Cẩm nang": { vi: "Cẩm nang", en: "Guides" },
+  "Sản phẩm bán chạy": {
+    vi: "Sản phẩm bán chạy",
+    en: "Best Sellers",
+  },
+  "Trái cây nội địa": {
+    vi: "Trái cây nội địa",
+    en: "Domestic Fruit",
+  },
+  "Giỏ hoa": { vi: "Giỏ hoa", en: "Flower Baskets" },
+};
+
+export function text(
+  language: Language,
+  key: keyof (typeof uiText)["vi"],
+  replacements: Record<string, string | number> = {},
+) {
+  return Object.entries(replacements).reduce(
+    (value, [name, replacement]) =>
+      value.replace(`{${name}}`, String(replacement)),
+    uiText[language][key],
+  );
+}
+
+export function categoryLabel(category: string, language: Language) {
+  return categoryText[category]?.[language] || category;
+}

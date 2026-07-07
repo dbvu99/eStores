@@ -1,0 +1,23 @@
+---
+import VinFruitsApp from "@vinfuit/VinFruitsApp";
+import { parseRouteFromPath } from "@vinfuit/lib/cart";
+import { businessInfo } from "@vinfuit/lib/business-info";
+
+const initialRoute = parseRouteFromPath(Astro.url.pathname);
+---
+
+<html lang={initialRoute.language || "vi"}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{businessInfo.displayName} | Trái cây cao cấp</title>
+    <meta
+      name="description"
+      content={`${businessInfo.displayName} tại ${businessInfo.address}. Hotline ${businessInfo.hotline}, email ${businessInfo.email}.`}
+    />
+  </head>
+  <body>
+    <VinFruitsApp client:load initialRoute={initialRoute} />
+  </body>
+</html>
