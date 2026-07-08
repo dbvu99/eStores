@@ -4,16 +4,22 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import react from '@astrojs/react';
-import node from '@astrojs/node';
+// import node from '@astrojs/node';
 
 import svelte from '@astrojs/svelte';
+
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+
   output:'server',
-  adapter: node({ mode: 'standalone' }),
-  integrations: [react(), svelte()]
+
+  // adapter: node({ mode: 'standalone' }),
+  integrations: [react(), svelte()],
+
+  adapter: vercel()
 });
